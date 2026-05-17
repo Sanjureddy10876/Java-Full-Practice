@@ -10,6 +10,7 @@ abstract class Account {
 	abstract void caluculateintrest();
 	void showBalanace() {
 		System.out.println("Current balance"+balance);
+		System.out.println("Current balance"+balance);
 	}
 }
 
