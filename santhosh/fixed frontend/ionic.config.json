@@ -1,0 +1,8 @@
+{
+  "name": "pua",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,238 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title  *ngIf="competition">{{competition.title}}</ion-title>
+    <ion-buttons slot="end" *ngIf="competition && ls.hasFunction('FUNC_VIEW_ADMIN_MENU') && competition.isWinnerAnnounced != '1'">
+      <ion-button [routerLink]="['/manage-competition-entries', competition.competitionId]">
+        <ion-icon slot="end" name="pencil-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="app-background">
+  <p-dialog [(visible)]="display" modal="true" dismissableMask="true">
+    <mat-video src="{{util.getFullUrl('file/') + videoToPlay}}" 
+               [autoplay]="true" [preload]="true" [fullscreen]="true" [download]="false" color="accent" spinner="spin" 
+               [overlay]="true" [playsinline]="false" style="height: 320px;">
+    </mat-video>
+  </p-dialog>
+  <ion-card *ngIf="competition">
+    <ion-card-header>
+      <img src="{{util.getFullUrl('file/') + competition.compPhoto}}" style="height:150px; float:right" class="ion-padding" *ngIf="competition.compPhoto"/>
+      <ion-card-title>{{competition.title}}</ion-card-title>
+      <ion-card-subtitle>Category: <b>{{mst.getCategoryDescByKey(competition.competitionCategory)}}</b></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="ion-text-justify ion-padding">
+      {{competition.description}}
+      <br/>
+    </ion-card-content>
+    <br/><br/><br/>
+    <ion-item class="ion-padding-top">
+      <ion-label>Age Limit</ion-label>
+      <ion-label class="ion-text-right" color="tertiary"><b>{{competition.minAge}} - {{competition.maxAge}}</b></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Enrollment Fee</ion-label>
+      <ion-label class="ion-text-right" color="tertiary"><b>{{competition.subscriptionPrice != null ? 'Rs. ' + competition.subscriptionPrice : 'Free'}}</b></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-label class="ion-text-right ion-text-wrap" color="tertiary"><b>{{util.getEnteredDateDDMMYYYY(competition.startTime)}} - {{util.getEnteredDateDDMMYYYY(competition.endTime)}}</b></ion-label>
+    </ion-item>
+
+    <div class="ion-text-center" *ngIf="competition.isUserEnrolled != true && !ls.hasFunction('FUNC_VIEW_ADMIN_MENU')">
+      <br/>
+      <ion-button fill="outline" shape="round" (click)="enroll(competition)">
+        <ion-icon name="cash-outline" slot="start"></ion-icon>
+        Enroll
+      </ion-button>
+    </div>
+
+
+    <div *ngIf="competition.isUserEnrolled == true && !ls.hasFunction('FUNC_VIEW_ADMIN_MENU') &&  competition.isWinnerAnnounced != '1'">
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+            <h2>Enrollment Status</h2>
+        </ion-label>
+        <ion-label color="success" class="ion-text-right">
+          <p>
+            <b>Enrolled</b>
+            <ion-icon name="checkmark-done-outline" class="ion-padding-right"></ion-icon>
+          </p>
+        </ion-label>
+      </ion-item>
+      <app-multi-file-upload msg="Upload Entry" id="uploadEntry" [(ngModel)]="fileId" *ngIf="!isEntrySubmitted(competition.competitionId)" format="mp3, mp4"></app-multi-file-upload>
+      <ion-item *ngIf="isEntrySubmitted(competition.competitionId)">
+        <mat-video src="{{util.getFullUrl('file/') + getFileId(competition.competitionId)}}" 
+               [autoplay]="true" [preload]="true" [fullscreen]="true" [download]="false" color="accent" spinner="spin" 
+               [overlay]="true" [playsinline]="false" style="width: 100%;">
+        </mat-video>
+      </ion-item>
+      <br/>
+      <div class="ion-text-center">
+        <ion-button *ngIf="fileId && fileId != null" (click)="uploadEntry()">
+          <ion-icon slot="start" name="cloud-upload-outline"></ion-icon>
+          Upload
+        </ion-button>
+      </div>
+    </div>
+  </ion-card>
+  <br/>
+  <div *ngIf="ls.hasFunction('FUNC_VIEW_ADMIN_MENU') && competition && competition.isWinnerAnnounced != '1'">
+
+    <ion-toolbar color="light">
+      <ion-segment color="primary" [(ngModel)]="opt" >
+        <ion-segment-button href="#all" value="all" (click)="getAllEntries(competition.competitionId)">
+          <ion-label>All Entries</ion-label>
+        </ion-segment-button>
+        <ion-segment-button href="#selected" value="selected" (click)="getShortlistedEntries(competition.competitionId)">
+          <ion-label>Selected Entries</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+
+    <div [ngSwitch]="opt" style="padding-top: 25px;">
+      <div *ngSwitchCase="'all'">
+        <div class="ion-text-center ion-padding">
+          <ion-label color="primary" style="font-size: small;">Swipe item to left for more options.</ion-label>
+        </div>
+        <ion-list *ngIf="entries.length > 0 && !isSearchInProgress">
+          <ion-item-sliding *ngFor="let entry of entries; let i = index" #i>
+            <ion-item [color]="entry.isShortlisted != '1' ? '' : 'success'">
+              <ion-avatar slot="start">
+                <ion-img [src]="'../../../assets/img/'+ (entry.gender == 'F' ? 'female.jpg' : 'male.jpg')" *ngIf="!entry.userProfile"></ion-img>
+                <ion-img [src]="util.getFullUrl('file/') + entry.userProfile" *ngIf="entry.userProfile"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>{{entry.fullUserName}}, {{entry.age}}</h2>
+                <p>{{entry.city}}, {{mst.getStateDescByKey(entry.state)}}</p>
+              </ion-label>
+              <ion-button fill="outline" slot="end" (click)="viewVideo($event, entry.fileId)" *ngIf="entry.fileId" [color]="entry.isShortlisted != '1' ? '' : 'light'">
+                View
+                <ion-icon name="eye-sharp" slot="end"></ion-icon>
+              </ion-button>
+              
+            </ion-item>
+            <ion-item-options side="end" *ngIf="entry.isShortlisted != '1'" >
+              <ion-item-option (click)="markShortlisted(entry.submittedEntriesId, i)" *ngIf="!isShortlistingInProgress">Shortlist
+                <ion-icon slot="icon-only" name="checkmark-done-sharp"></ion-icon>
+              </ion-item-option>
+              <ion-spinner name="dots" *ngIf="isShortlistingInProgress"></ion-spinner>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </div>
+      <div *ngSwitchCase="'selected'">
+        <div class="ion-text-center ion-paddin-top">
+          <ion-button (click)="confirmWinner()" *ngIf="winnerList.length > 0">
+            <ion-icon slot="start" name="checkmark-done-sharp"></ion-icon>
+            Save Winners
+          </ion-button>
+        </div>
+        <br/>
+        <ion-card *ngFor="let entry of entries; let i = index">
+          <ion-card-header>
+            <ion-item [color]="entry.winnerMarked != '1' ? 'light' : 'warning'">
+              <ion-avatar slot="start">
+                <ion-img [src]="'../../../assets/img/'+ (entry.gender == 'F' ? 'female.jpg' : 'male.jpg')" *ngIf="!entry.userProfile"></ion-img>
+                <ion-img [src]="util.getFullUrl('file/') + entry.userProfile" *ngIf="entry.userProfile"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>{{entry.fullUserName}}, {{entry.age}}</h2>
+                <p>{{entry.city}}, {{mst.getStateDescByKey(entry.state)}}</p>
+              </ion-label>
+              <ion-button fill="outline" slot="end" (click)="viewVideo($event, entry.fileId)" *ngIf="entry.fileId" [color]="entry.winnerMarked != '1' ? 'primary' : 'light'">
+                View
+                <ion-icon name="eye-sharp" slot="end"></ion-icon>
+              </ion-button>
+              
+            </ion-item>
+          </ion-card-header>
+      
+          <ion-card-content>
+              <ion-list>
+                <ion-item>
+                  <ion-label>Winning Position</ion-label>
+                  <ion-select placeholder="--Select Winning Position--" (ionChange)="setPosition($event, entry)">
+                    <ion-select-option value="1">First</ion-select-option>
+                    <ion-select-option value="2">Second</ion-select-option>
+                    <ion-select-option value="3">Third</ion-select-option>
+                    <ion-select-option value="O">Other</ion-select-option>
+                  </ion-select>
+                  <ion-input type="text" maxlength="20" (ionChange)="setDesc($event, entry)" *ngIf="entry.winningPosition == 'O'" placeholder="Max 20 characters"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Winning Amount</ion-label>
+                  <ion-input type="number" maxlength="6" (ionChange)="setAmount($event, entry)"></ion-input>
+                </ion-item>
+                <br/>
+                <div class="ion-text-center ion-paddin-top">
+                  <ion-button (click)="saveWinner(entry)" *ngIf="!entry.winnerMarked" size="small">
+                    <ion-icon slot="start" name="checkmark-sharp"></ion-icon>
+                    Mark Winner
+                  </ion-button>
+                  <ion-chip *ngIf="entry.winnerMarked">
+                    <ion-label color="primary">Winner : {{getPositionDescription(entry)}}</ion-label>
+                  </ion-chip>
+                </div>
+              </ion-list>
+          </ion-card-content>
+        </ion-card>
+        <br/>
+        <div class="ion-text-center ion-paddin-top">
+          <ion-button (click)="confirmWinner()" *ngIf="winnerList.length > 0">
+            <ion-icon slot="start" name="checkmark-done-sharp"></ion-icon>
+            Save Winners
+          </ion-button>
+        </div>
+      </div>
+    </div>
+    <ion-item *ngIf="showError">
+      <ion-label color="danger" class="ion-text-center"><b>No Records Found.</b></ion-label>
+    </ion-item>
+
+    <!-- Dots -->
+    <div class="ion-text-center" *ngIf="isSearchInProgress">
+      <ion-spinner name="dots" color="primary"></ion-spinner> 
+    </div>
+
+    
+  </div>
+
+  <div *ngIf="competition && competition.isWinnerAnnounced == '1'">
+    <div class="ion-text-center">
+      <ion-button (click)="getWinners(competition.competitionId)">
+        <ion-icon slot="start" name="musical-notes-sharp"></ion-icon>
+        View Winners
+      </ion-button>
+    </div>
+    <div class="ion-text-center" *ngIf="isSearchInProgress">
+      <ion-spinner name="dots" color="primary"></ion-spinner> 
+    </div>
+    <br/>
+    <ion-list *ngIf="entries.length > 0 && !isSearchInProgress" >
+      <ion-item-sliding *ngFor="let entry of entries; let i = index" #i>
+        <ion-item [color]="entry.isShortlisted != '1' ? '' : 'success'">
+          <ion-avatar slot="start">
+            <ion-img [src]="'../../../assets/img/'+ (entry.gender == 'F' ? 'female.jpg' : 'male.jpg')" *ngIf="!entry.userProfile"></ion-img>
+            <ion-img [src]="util.getFullUrl('file/') + entry.userProfile" *ngIf="entry.userProfile"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2><b>{{entry.fullUserName}}, {{entry.age}}</b></h2>
+            <p>{{entry.city}}, {{mst.getStateDescByKey(entry.state)}}</p>
+            <p>Position: {{getPositionDescription(entry)}}</p>
+          </ion-label>
+          <ion-button fill="outline" slot="end" (click)="viewVideo($event, entry.fileId)" *ngIf="entry.fileId" [color]="entry.isShortlisted != '1' ? '' : 'light'">
+            Song
+            <ion-icon name="musical-notes-sharp" slot="end"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+  
+</ion-content>
+<app-footer></app-footer>

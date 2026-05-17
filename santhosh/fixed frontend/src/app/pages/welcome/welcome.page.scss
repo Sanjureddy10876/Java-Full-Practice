@@ -1,0 +1,9 @@
+ion-header::after{
+    background-image: none !important;
+    //background-image: url(assets/icon/bg3.png) 0 0/100% 100% no-repeat !important;
+  }
+
+  ion-toolbar{
+    --background: linear-gradient(to bottom, #1B0035, #0072FF) !important;
+    --color : white !important;
+}

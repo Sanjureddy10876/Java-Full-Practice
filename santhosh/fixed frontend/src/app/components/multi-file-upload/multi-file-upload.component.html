@@ -1,0 +1,28 @@
+<ion-item *ngIf="uploader?.queue?.length < 1 && !icon" lines="none" [class]="class ? class : 'app-ion-item'">
+  <ion-label>{{msg}} <label *ngIf="required" style="color: red !important;">*</label> <br/> <ion-label color="primary" *ngIf="format">Allowed Formats : <i>{{format}}</i></ion-label></ion-label>
+  <input type="file" ng2FileSelect [uploader]="uploader" [id]="id"/>
+  <ion-button (click)="openFileDialog(id)" slot="end">
+    <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+    Upload
+  </ion-button>
+</ion-item>
+
+<div *ngIf="uploader?.queue?.length < 1 && icon">
+  <input type="file" ng2FileSelect [uploader]="uploader" [id]="id"/>
+  <ion-button (click)="openFileDialog(id)" slot="end">
+    <ion-icon name="cloud-upload-outline"></ion-icon>
+  </ion-button>
+</div>
+
+<div *ngIf="!showProgress && !icon">
+  <ion-item *ngFor="let item of uploader.queue" lines="none" [class]="class ? class : 'app-ion-item'">
+    <ion-label>
+      <b>{{ item?.file?.name }}</b>
+    </ion-label>
+    <ion-button slot="end" (click)="clear()">
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
+  </ion-item>
+</div>
+
+<ion-progress-bar *ngIf="showProgress" type="indeterminate" msg="Course Picture" format="mp4"></ion-progress-bar>

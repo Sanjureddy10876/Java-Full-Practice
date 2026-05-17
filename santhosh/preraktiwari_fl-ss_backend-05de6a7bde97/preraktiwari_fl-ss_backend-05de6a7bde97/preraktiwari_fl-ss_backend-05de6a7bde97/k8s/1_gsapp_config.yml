@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: surshree
+  namespace: default
+data:
+  surshree.properties: |
+    PG_HOSTNAME=35.224.74.22
+    PG_PORT=9567
+    PG_DB_NAME=ssuat
+    PG_USER=pgdevadm
+    PG_PASS=pgdev@123
+    APP_CONTEXT:surshree
+    SMS_SERVICE_SERVICE:http://sms-service

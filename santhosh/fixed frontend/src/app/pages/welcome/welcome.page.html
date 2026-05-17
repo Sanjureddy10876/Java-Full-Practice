@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar class="app-round-bottom">
+    <ion-buttons slot="start" style="margin-top: -90px;">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <img src="assets/img/logo1.png" class="welcome_page" style="max-width: 40%; margin-left: -40px;"/>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="background-image">
+  <ion-grid>
+      <ion-row>
+        <ion-col size-md="4" size-lg="2" size-xs="12" size-sm="12">
+          <ion-card class="ion-text-center app-card" button="true" [routerLink]="['/participate-in-comp']">
+            <ion-card-content class="app-card-content">
+              <div class="ion-text-center"> 
+                <ion-img src="assets/img/Group 367.png"></ion-img>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size-md="4" size-lg="2" size-xs="6" size-sm="6">
+          <ion-card class="ion-text-center app-card" button="true" [routerLink]="['/winners']">
+            <ion-card-content class="app-card-content">
+              <div class="ion-text-center"> 
+                <ion-img src="assets/img/Group 355.png"></ion-img>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size-md="4" size-lg="2" size-xs="6" size-sm="6">
+          <ion-card class="ion-text-center app-card" button="true" (click)="comingSoon()">
+            <ion-card-content class="app-card-content">
+              <div class="ion-text-center"> 
+                <ion-img src="assets/img/Group 357.png"></ion-img>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size-md="4" size-lg="2" size-xs="6" size-sm="6">
+          <ion-card class="ion-text-center app-card" button="true" [routerLink]="['/learn-music']">
+            <ion-card-content class="app-card-content">
+              <div class="ion-text-center"> 
+                <ion-img src="assets/img/Group 364.png"></ion-img>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size-md="4" size-lg="2" size-xs="6" size-sm="6">
+          <ion-card class="ion-text-center app-card" button="true" (click)="share()">
+            <ion-card-content class="app-card-content">
+              <div class="ion-text-center"> 
+                <ion-img src="assets/img/Group 370.png"></ion-img>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size-md="4" size-lg="2" size-xs="12" size-sm="12" *ngIf="ls.hasFunction('FUNC_VIEW_ADMIN_MENU')">
+          <ion-card class="ion-text-center app-card" button="true" [routerLink]="['/manage-competitions']">
+            <ion-card-content class="app-card-content">
+              <div class="ion-text-center"> 
+                <ion-img src="assets/img/Group 369.png"></ion-img>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
+<app-footer></app-footer>

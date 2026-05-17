@@ -1,0 +1,60 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
+      <h2 class="slide-title">
+        Welcome to <b>Garbh Vigyan</b> App
+      </h2>
+      <p>
+        "<b>Garbh Vigyan</b>" Mobile app is an all in one app catering needs of pregnant women, doctors, parents, and volunteers. The app will work as a digital mentor 
+        for whole family during pregnancy. App will contain health tips, videos, quizzes, recommendations, audios and systematic weekly plans for the users to guide 
+        and mentor them on during 280 days. This application will work from Day 1 of pregnancy. This will provide activity and material on day to day basis on this 
+        application.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
+      <h2 class="slide-title">Whats in it for Pregnant Women?</h2>
+        <p>
+          "<b>Garbh Vigyan</b>" is one stop platform which provides health tips, doctor advice through question & answers, diet plan, yoga excercises and much more.
+        </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+      <h2 class="slide-title">Whats in it for Family Members?</h2>
+      <p>
+        "<b>Garbh Vigyan</b>" app provides a facility to maternal as well as paternal side to interact and understand their roles and responsibilities during the 
+        pregnancy period as per the current condition of the pregnant women. It also educates them and helps them understand the science of Garbhsanskar and the 
+        role of spiritualism and holistic lifestyle in pregnancy.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+      <h2 class="slide-title">Looking for IQ, EQ, SQ & PQ Development?</h2>
+      <p>
+        "<b>Garbh Vigyan</b>" app provides complete, day to day detailed plan to cater the IQ, EQ, SQ, and PQ development of the child in the womb, with the help of
+         videos, quizzes, interactive media and garbh samwad.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+      <h2 class="slide-title">Ready to Play?</h2>
+      <ion-button fill="clear" (click)="startApp()">
+        Continue
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

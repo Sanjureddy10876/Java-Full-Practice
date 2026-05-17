@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Course</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="courseForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Category <label style="color: red !important;">*</label></ion-label>
+        <ion-select placeholder="Select One" [formControl]="category">
+          <ion-select-option value="INST">Instrumental</ion-select-option>
+          <ion-select-option value="VOCL">Vocal</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <app-error [condition]="category.touched && category.invalid" msg="Please select category."></app-error>
+      <ion-item>
+        <ion-label position="floating">Course Name <label style="color: red !important;">*</label></ion-label>
+        <ion-input type="text" maxlength="50" [formControl]="trainingName"></ion-input>
+      </ion-item>
+      <app-error [condition]="trainingName.touched && trainingName.invalid" msg="Please enter course name."></app-error>
+      <ion-item>
+        <ion-label position="floating">Course Description <label style="color: red !important;">*</label></ion-label>
+        <ion-textarea type="text" maxlength="300" [formControl]="trainingDesc"></ion-textarea>
+      </ion-item>
+      <app-error [condition]="trainingDesc.touched && trainingDesc.invalid" msg="Please enter course description."></app-error>
+      <ion-item>
+        <ion-label position="floating">Subscription Amount <label style="color: red !important;">*</label></ion-label>
+        <ion-input type="number" maxlength="10" [formControl]="subscriptionAmount"></ion-input>
+      </ion-item>
+      <app-error [condition]="subscriptionAmount.touched && subscriptionAmount.invalid" msg="Please enter subscription amount."></app-error>
+      <app-multi-file-upload required="true" msg="Course Picture" id="coursePicture" format="png, jpeg, jpg" [formControl]="trainingPhoto"></app-multi-file-upload>
+    </ion-list>
+  </form>
+  <hr/>
+  <app-error [condition]="showContentNotAddedError" msg="Please add atleast One Activity Content before saving an Activity."></app-error>
+  <form [formGroup]="courseContentForm">
+    <ion-list >
+      <ion-list-header lines="inset">
+        <ion-label class="ion-text-center" color="primary"><b>Add Videos to Course</b></ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label position="floating">Video Name <label style="color: red !important;">*</label></ion-label>
+        <ion-input type="text" maxlength="50" [formControl]="trainingContentName"></ion-input>
+      </ion-item>
+      <app-error [condition]="trainingContentName.touched && trainingContentName.invalid" msg="Please enter video name."></app-error>
+      <ion-item>
+        <ion-label position="floating">Video Description <label style="color: red !important;">*</label></ion-label>
+        <ion-textarea type="text" maxlength="300" [formControl]="trainingContentDesc"></ion-textarea>
+      </ion-item>
+      <app-error [condition]="trainingContentDesc.touched && trainingContentDesc.invalid" msg="Please enter video description."></app-error>
+      <ion-item>
+        <ion-label>Display Order <label style="color: red !important;">*</label></ion-label>
+        <ion-select placeholder="Select One" [formControl]="sortOrder">
+          <ion-select-option [value]="num" *ngFor="let num of [1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]">{{num}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <app-error [condition]="sortOrder.touched && sortOrder.invalid" msg="Please select display order."></app-error>
+      <app-multi-file-upload required="true" msg="Upload Video" id="courseVidep" format="mp4" [formControl]="contentId"></app-multi-file-upload>
+    </ion-list>
+    <ion-button expand="block" type="submit" [disabled] = "courseContentForm.invalid" (click)="addContent()">
+      <ion-icon slot="start" name="add" ></ion-icon>
+      Add Video
+    </ion-button>
+  </form>
+  <ion-list *ngIf="videos.length > 0">
+    <ion-list-header lines="inset">
+      <ion-label>Added Videos</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let content of videos; let i = index">
+      <ion-label class="ion-text-wrap"><ion-badge>{{i + 1}}</ion-badge> &nbsp;&nbsp; {{content.trainingContentName}}</ion-label>
+      <ion-button slot="end" (click)="delete(i)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="saveCourse()" *ngIf="videos.length > 0" [disabled]="courseForm.invalid"> 
+    <ion-icon slot="start" name="add"></ion-icon>
+    Save Course
+  </ion-button>
+</ion-content>
+
+<app-footer></app-footer>

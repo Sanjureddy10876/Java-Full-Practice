@@ -1,0 +1,408 @@
+2020-04-14 10:26:23,720 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h34m44s137ms).
+2020-04-14 10:26:30,821 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 10:26:30,822 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 13:50:42,828 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 13:50:45,584 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 13:50:46,140 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 502ms. Found 3 JPA repository interfaces.
+2020-04-14 13:50:47,673 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=88104acb-95b1-3d93-b86f-28e512f19293
+2020-04-14 13:50:49,945 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-04-14 13:50:50,011 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-14 13:50:50,013 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-04-14 13:50:50,018 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 13:50:50,890 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 13:50:50,891 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-14 13:50:50,892 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7653 ms
+2020-04-14 13:50:52,476 INFO CacheConfig [main] Initializing cache.
+2020-04-14 13:50:53,006 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 13:50:53,520 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 13:50:54,345 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 13:50:54,784 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 13:50:55,206 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 13:50:55,252 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-04-14 13:50:57,255 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 13:50:57,447 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 13:50:58,306 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtFilter' configured for use
+2020-04-14 13:50:58,408 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-14 13:50:59,151 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-14 13:50:59,172 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2020-04-14 13:51:21,501 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 12 mappings in 'requestMappingHandlerMapping'
+2020-04-14 13:51:21,612 DEBUG org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping [main] Detected 1 mappings in 'beanNameHandlerMapping'
+2020-04-14 13:51:21,664 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-14 13:51:21,693 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2020-04-14 13:51:26,405 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ab90b8c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4af8ff3, org.springframework.security.web.header.HeaderWriterFilter@f61f06e, org.springframework.security.web.authentication.logout.LogoutFilter@78ae34f7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@144caca6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d8230cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67c2ff5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@640a80aa, org.springframework.security.web.session.SessionManagementFilter@3edb09b9, org.springframework.security.web.access.ExceptionTranslationFilter@7b80ac30, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@93cc5eb]
+2020-04-14 13:51:26,438 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@2ca4b010, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@83b39c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@5297030e, org.springframework.security.web.header.HeaderWriterFilter@511ba9c9, org.springframework.security.web.authentication.logout.LogoutFilter@7b237c2c, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@c32908c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fcc8d9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7315264e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f7653ae, org.springframework.security.web.session.SessionManagementFilter@3debeb5e, org.springframework.security.web.access.ExceptionTranslationFilter@1227ea21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c3a2935]
+2020-04-14 13:51:26,443 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a2c69a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@108a7fff, org.springframework.security.web.header.HeaderWriterFilter@6d9bcf19, org.springframework.security.web.authentication.logout.LogoutFilter@22ab3e3b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56f8ab05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@652855c4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12581426, org.springframework.security.web.session.SessionManagementFilter@23b4f0a9, org.springframework.security.web.access.ExceptionTranslationFilter@47e02a89, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@132f1d85]
+2020-04-14 13:51:26,509 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-04-14 13:51:26,566 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-14 13:51:26,631 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 13:51:26,632 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 13:51:26,633 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-04-14 13:51:26,710 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 13:51:26,719 INFO org.springframework.boot.StartupInfoLogger [main] Started PandemicUnemploymentInsuranceApplication in 47.87 seconds (JVM running for 48.933)
+2020-04-14 13:51:43,237 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 13:51:43,238 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-04-14 13:51:43,239 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-04-14 13:51:43,259 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-14 13:51:43,260 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 22 ms
+2020-04-14 13:58:49,290 INFO org.springframework.security.oauth2.provider.token.store.JdbcTokenStore [http-nio-8080-exec-7] Failed to find access token for token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkxIiwiaXNfdXNlcl9yZWdpc3RlcmVkIjp0cnVlLCJleHAiOjE1ODY4ODYxNDEsImlhdCI6MTU4Njg1MDE0MX0.7Ih2iwzCXnOipQYNGFogoFqG0N4HXBO-sS3sQP18rog
+2020-04-14 14:01:26,620 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 14:01:26,629 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 14:05:23,975 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-9] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 14:05:24,005 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 14:05:24,069 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:06:52,897 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 14:06:52,930 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 14:06:52,947 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:06:59,330 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for GET "/error", parameters={}
+2020-04-14 14:06:59,337 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-04-14 14:06:59,498 DEBUG org.springframework.web.servlet.view.ContentNegotiatingViewResolver [http-nio-8080-exec-2] Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-04-14 14:06:59,511 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:07:04,456 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for GET "/error", parameters={}
+2020-04-14 14:07:04,459 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-04-14 14:07:04,468 DEBUG org.springframework.web.servlet.view.ContentNegotiatingViewResolver [http-nio-8080-exec-4] Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-04-14 14:07:04,470 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:07:07,057 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] "ERROR" dispatch for GET "/error", parameters={}
+2020-04-14 14:07:07,063 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2020-04-14 14:07:07,069 DEBUG org.springframework.web.servlet.view.ContentNegotiatingViewResolver [http-nio-8080-exec-5] Selected 'text/html' given [text/html, text/html;q=0.8]
+2020-04-14 14:07:07,070 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:07:17,456 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-8] GET "/oauth/token", parameters={}
+2020-04-14 14:07:17,480 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-8080-exec-8] Using @ExceptionHandler org.springframework.security.oauth2.provider.endpoint.TokenEndpoint#handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException)
+2020-04-14 14:07:17,481 INFO org.springframework.security.oauth2.provider.endpoint.TokenEndpoint [http-nio-8080-exec-8] Handling error: HttpRequestMethodNotSupportedException, Request method 'GET' not supported
+2020-04-14 14:07:17,521 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-8] Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-04-14 14:07:17,524 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-8] Writing [error="method_not_allowed", error_description="Request method 'GET' not supported"]
+2020-04-14 14:07:17,532 DEBUG org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-8] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-04-14 14:07:17,534 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-8] Completed 405 METHOD_NOT_ALLOWED
+2020-04-14 14:11:26,605 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 14:11:26,613 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 14:16:12,513 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 14:16:14,082 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 14:16:14,253 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 156ms. Found 3 JPA repository interfaces.
+2020-04-14 14:16:15,398 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=d72d19a7-602c-393b-92d4-446ef3b1c450
+2020-04-14 14:16:16,559 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-04-14 14:16:16,589 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-14 14:16:16,591 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-04-14 14:16:16,591 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 14:16:16,915 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 14:16:16,916 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-14 14:16:16,916 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4302 ms
+2020-04-14 14:16:17,636 INFO CacheConfig [main] Initializing cache.
+2020-04-14 14:16:17,797 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 14:16:17,984 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 14:16:18,425 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 14:16:18,628 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 14:16:18,884 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 14:16:18,928 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-04-14 14:16:20,905 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 14:16:21,136 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 14:16:22,148 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtFilter' configured for use
+2020-04-14 14:16:22,211 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-14 14:16:22,638 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 12 mappings in 'requestMappingHandlerMapping'
+2020-04-14 14:16:22,656 DEBUG org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping [main] Detected 1 mappings in 'beanNameHandlerMapping'
+2020-04-14 14:16:22,773 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2020-04-14 14:16:22,920 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2020-04-14 14:16:24,142 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3448a248, org.springframework.security.web.context.SecurityContextPersistenceFilter@555454c7, org.springframework.security.web.header.HeaderWriterFilter@5a0c0680, org.springframework.security.web.authentication.logout.LogoutFilter@38c7ad43, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@77c7d3f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56a63c28, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1641dfb3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8788194, org.springframework.security.web.session.SessionManagementFilter@331fe6d4, org.springframework.security.web.access.ExceptionTranslationFilter@2823bd30, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76dc9569]
+2020-04-14 14:16:24,173 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@7a9e44ff, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f8e1096, org.springframework.security.web.context.SecurityContextPersistenceFilter@a8ef0c2, org.springframework.security.web.header.HeaderWriterFilter@7b0a69b9, org.springframework.security.web.authentication.logout.LogoutFilter@329cef32, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@219bad15, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46c5747f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13a35d3b, org.springframework.security.web.session.SessionManagementFilter@6d398b6c, org.springframework.security.web.access.ExceptionTranslationFilter@4f1072ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17931cc0]
+2020-04-14 14:16:24,179 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47fca369, org.springframework.security.web.context.SecurityContextPersistenceFilter@483f19c0, org.springframework.security.web.header.HeaderWriterFilter@651bec9a, org.springframework.security.web.authentication.logout.LogoutFilter@549dfe1d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f111e97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35d44cd3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@296a350, org.springframework.security.web.session.SessionManagementFilter@76d4e1af, org.springframework.security.web.access.ExceptionTranslationFilter@65145fb7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@556a5e70]
+2020-04-14 14:16:24,251 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-04-14 14:16:24,333 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-14 14:16:24,586 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 14:16:24,587 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 14:16:24,593 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-04-14 14:16:24,718 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 14:16:24,725 INFO org.springframework.boot.StartupInfoLogger [main] Started PandemicUnemploymentInsuranceApplication in 15.598 seconds (JVM running for 16.979)
+2020-04-14 14:17:59,492 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 14:17:59,494 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-04-14 14:17:59,497 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-04-14 14:17:59,550 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-14 14:17:59,552 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 55 ms
+2020-04-14 14:17:59,724 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 14:17:59,731 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 14:17:59,789 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:19:20,493 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 14:19:21,898 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 14:19:22,039 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 124ms. Found 3 JPA repository interfaces.
+2020-04-14 14:19:23,747 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=9a9340e3-8c58-36f8-8c07-38ddb9858025
+2020-04-14 14:19:25,299 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-04-14 14:19:25,348 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-14 14:19:25,350 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-04-14 14:19:25,351 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 14:19:25,587 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 14:19:25,587 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-14 14:19:25,588 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5024 ms
+2020-04-14 14:19:26,377 INFO CacheConfig [main] Initializing cache.
+2020-04-14 14:19:26,717 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 14:19:26,832 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 14:19:27,565 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 14:19:28,460 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 14:19:28,654 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 14:19:28,712 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-04-14 14:19:31,431 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 14:19:31,625 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 14:19:32,673 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'corsFilter' configured for use
+2020-04-14 14:19:32,674 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtFilter' configured for use
+2020-04-14 14:19:32,731 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-14 14:19:33,017 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 12 mappings in 'requestMappingHandlerMapping'
+2020-04-14 14:19:33,043 DEBUG org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping [main] Detected 1 mappings in 'beanNameHandlerMapping'
+2020-04-14 14:19:33,129 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2020-04-14 14:19:33,207 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2020-04-14 14:19:34,431 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e11996e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b08f55a, org.springframework.security.web.header.HeaderWriterFilter@2e8417ea, org.springframework.security.web.authentication.logout.LogoutFilter@cf933b1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f6dd89c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ff3af97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d29fc6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7dcc6679, org.springframework.security.web.session.SessionManagementFilter@31d327b6, org.springframework.security.web.access.ExceptionTranslationFilter@2975715, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1464a177]
+2020-04-14 14:19:34,445 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@528070fe, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3df79197, org.springframework.security.web.context.SecurityContextPersistenceFilter@59eff566, org.springframework.security.web.header.HeaderWriterFilter@5a90ea5c, org.springframework.security.web.authentication.logout.LogoutFilter@4843b35f, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1e79b0fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1277a6a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fe87cb9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53741683, org.springframework.security.web.session.SessionManagementFilter@537e52de, org.springframework.security.web.access.ExceptionTranslationFilter@2f4c83f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@236e6563]
+2020-04-14 14:19:34,449 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9be2897, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f2c36de, org.springframework.security.web.header.HeaderWriterFilter@280cb0b4, org.springframework.security.web.authentication.logout.LogoutFilter@7b381066, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61a369cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ce7ec5f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e1c566d, org.springframework.security.web.session.SessionManagementFilter@108b2321, org.springframework.security.web.access.ExceptionTranslationFilter@795ce9b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50cb64d5]
+2020-04-14 14:19:34,503 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-04-14 14:19:34,554 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-14 14:19:34,616 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 14:19:34,617 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 14:19:34,618 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-04-14 14:19:34,687 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 14:19:34,702 INFO org.springframework.boot.StartupInfoLogger [main] Started PandemicUnemploymentInsuranceApplication in 17.492 seconds (JVM running for 18.447)
+2020-04-14 14:20:09,671 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 14:20:09,674 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-04-14 14:20:09,677 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-04-14 14:20:09,707 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-14 14:20:09,708 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 32 ms
+2020-04-14 14:20:09,876 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 14:20:09,902 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 14:20:09,956 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:20:17,267 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 14:20:17,268 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 14:20:17,271 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 401
+2020-04-14 14:21:35,297 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 14:21:35,316 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 14:21:35,317 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 401
+2020-04-14 15:14:10,193 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m11s353ms).
+2020-04-14 15:18:16,887 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 15:18:16,895 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 15:28:16,898 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 15:28:16,907 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 15:37:56,346 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 15:37:57,834 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'corsFilter' defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=CORSAdvice; factoryMethodName=corsFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class]] for bean 'corsFilter': There is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=authorizationServerConfig; factoryMethodName=corsFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/tcs/reemployment/config/AuthorizationServerConfig.class]] bound.
+2020-04-14 15:37:57,856 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-14 15:37:57,870 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'corsFilter', defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class], could not be registered. A bean with that name has already been defined in class path resource [com/tcs/reemployment/config/AuthorizationServerConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-04-14 15:40:04,548 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 15:40:06,084 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 15:40:06,245 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 143ms. Found 3 JPA repository interfaces.
+2020-04-14 15:40:07,400 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=9539bb92-5598-37b2-963f-6abff48b3782
+2020-04-14 15:40:08,583 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-04-14 15:40:08,601 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-14 15:40:08,604 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-04-14 15:40:08,606 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 15:40:08,893 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 15:40:08,895 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-14 15:40:08,897 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4258 ms
+2020-04-14 15:40:09,635 INFO CacheConfig [main] Initializing cache.
+2020-04-14 15:40:09,798 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 15:40:09,964 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 15:40:10,377 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 15:40:10,590 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 15:40:10,830 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 15:40:10,881 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-04-14 15:40:12,883 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 15:40:13,080 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 15:40:13,973 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-14 15:40:14,148 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'corsFilter' configured for use
+2020-04-14 15:40:14,149 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtFilter' configured for use
+2020-04-14 15:40:15,115 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74474fc0, org.springframework.security.web.context.SecurityContextPersistenceFilter@59ebe484, org.springframework.security.web.header.HeaderWriterFilter@4a234e1f, org.springframework.security.web.authentication.logout.LogoutFilter@65689000, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@365291bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cafb30, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@719e8f9f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cd239f6, org.springframework.security.web.session.SessionManagementFilter@4c364a9d, org.springframework.security.web.access.ExceptionTranslationFilter@23c0fcf0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@722e1bff]
+2020-04-14 15:40:15,140 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@690113f0, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@509e4d53, org.springframework.security.web.context.SecurityContextPersistenceFilter@184e5c44, org.springframework.security.web.header.HeaderWriterFilter@4c25687b, org.springframework.security.web.authentication.logout.LogoutFilter@5a740449, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@3ce4b0a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6527aa0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6153aca1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f915016, org.springframework.security.web.session.SessionManagementFilter@5c21b22e, org.springframework.security.web.access.ExceptionTranslationFilter@7dbc77ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70799ca7]
+2020-04-14 15:40:15,148 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@693c7741, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e729fea, org.springframework.security.web.header.HeaderWriterFilter@2e9bff08, org.springframework.security.web.authentication.logout.LogoutFilter@2d10160a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a345c6c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b26839d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d3b4646, com.tcs.reemployment.filter.CorsFilter@2ef812b, org.springframework.security.web.session.SessionManagementFilter@54151d07, org.springframework.security.web.access.ExceptionTranslationFilter@3ed1446c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f213e97]
+2020-04-14 15:40:15,264 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 12 mappings in 'requestMappingHandlerMapping'
+2020-04-14 15:40:15,304 DEBUG org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping [main] Detected 1 mappings in 'beanNameHandlerMapping'
+2020-04-14 15:40:15,542 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2020-04-14 15:40:15,625 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2020-04-14 15:40:16,094 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-04-14 15:40:16,164 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-14 15:40:16,263 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 15:40:16,265 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 15:40:16,266 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-04-14 15:40:16,350 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 15:40:16,357 INFO org.springframework.boot.StartupInfoLogger [main] Started PandemicUnemploymentInsuranceApplication in 14.8 seconds (JVM running for 16.175)
+2020-04-14 15:40:58,795 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 15:40:58,796 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-04-14 15:40:58,798 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-04-14 15:40:58,820 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-14 15:40:58,822 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 24 ms
+2020-04-14 15:40:58,917 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 15:40:58,933 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 15:40:58,992 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 401
+2020-04-14 15:44:51,342 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 15:44:52,819 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'corsFilter' defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=CORSAdvice; factoryMethodName=corsFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class]] for bean 'corsFilter': There is already [Generic bean: class [com.tcs.reemployment.filter.CorsFilter]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/ptiwari/Documents/project/tcs/backend/reemployment/build/classes/java/main/com/tcs/reemployment/filter/CorsFilter.class]] bound.
+2020-04-14 15:44:52,835 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-14 15:44:52,841 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'corsFilter', defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class], could not be registered. A bean with that name has already been defined in file [/Users/ptiwari/Documents/project/tcs/backend/reemployment/build/classes/java/main/com/tcs/reemployment/filter/CorsFilter.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-04-14 17:43:25,808 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 17:43:27,384 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'corsFilter' defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=CORSAdvice; factoryMethodName=corsFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class]] for bean 'corsFilter': There is already [Generic bean: class [com.tcs.reemployment.filter.CorsFilter]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/ptiwari/Documents/project/tcs/backend/reemployment/build/classes/java/main/com/tcs/reemployment/filter/CorsFilter.class]] bound.
+2020-04-14 17:43:27,405 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-14 17:43:27,419 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'corsFilter', defined in class path resource [com/tcs/reemployment/config/CORSAdvice.class], could not be registered. A bean with that name has already been defined in file [/Users/ptiwari/Documents/project/tcs/backend/reemployment/build/classes/java/main/com/tcs/reemployment/filter/CorsFilter.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-04-14 17:45:50,037 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-04-14 17:45:51,619 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-14 17:45:51,789 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 155ms. Found 3 JPA repository interfaces.
+2020-04-14 17:45:52,924 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=0e5956bf-2da9-3451-979b-5eaa281c3315
+2020-04-14 17:45:54,097 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-04-14 17:45:54,115 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-14 17:45:54,116 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-04-14 17:45:54,116 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-14 17:45:54,388 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-04-14 17:45:54,391 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-14 17:45:54,391 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4258 ms
+2020-04-14 17:45:55,241 INFO CacheConfig [main] Initializing cache.
+2020-04-14 17:45:55,467 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-14 17:45:55,669 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-14 17:45:56,142 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-14 17:45:56,392 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-04-14 17:45:56,649 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-04-14 17:45:56,714 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2020-04-14 17:45:58,805 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-14 17:45:59,059 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-14 17:45:59,982 INFO org.springframework.boot.web.servlet.DynamicRegistrationBean [main] Filter corsFilter was not registered (possibly already registered?)
+2020-04-14 17:46:00,029 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'corsFilter' configured for use
+2020-04-14 17:46:00,030 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtFilter' configured for use
+2020-04-14 17:46:00,092 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-14 17:46:10,191 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@88fe9a8, org.springframework.security.web.context.SecurityContextPersistenceFilter@36a59d8, org.springframework.security.web.header.HeaderWriterFilter@7af4286, org.springframework.security.web.authentication.logout.LogoutFilter@193f5509, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4d2bcca8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51751265, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3299e315, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17d606c9, org.springframework.security.web.session.SessionManagementFilter@718b9d56, org.springframework.security.web.access.ExceptionTranslationFilter@6dc98c02, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c65a7fc]
+2020-04-14 17:46:10,247 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@303a484e, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@760f4310, org.springframework.security.web.context.SecurityContextPersistenceFilter@20673498, org.springframework.security.web.header.HeaderWriterFilter@63893cf6, org.springframework.security.web.authentication.logout.LogoutFilter@159e9629, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@4f45290f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a8d6eb3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50c99398, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b9d85c2, org.springframework.security.web.session.SessionManagementFilter@7a14d8a4, org.springframework.security.web.access.ExceptionTranslationFilter@6b0636d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56511eda]
+2020-04-14 17:46:10,253 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@611f28f5, org.springframework.security.web.context.SecurityContextPersistenceFilter@50508ed3, org.springframework.security.web.header.HeaderWriterFilter@1ae69abe, org.springframework.security.web.authentication.logout.LogoutFilter@5add0cc0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d319d2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23acd55e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7806db3f, com.tcs.reemployment.filter.CorsFilter@4276ad40, org.springframework.security.web.session.SessionManagementFilter@557f0a39, org.springframework.security.web.access.ExceptionTranslationFilter@4c9235c0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@727b3b0]
+2020-04-14 17:46:10,347 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 12 mappings in 'requestMappingHandlerMapping'
+2020-04-14 17:46:10,360 DEBUG org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping [main] Detected 1 mappings in 'beanNameHandlerMapping'
+2020-04-14 17:46:10,437 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2020-04-14 17:46:10,498 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2020-04-14 17:46:10,876 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-04-14 17:46:11,001 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-14 17:46:11,076 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 17:46:11,078 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 17:46:11,079 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-04-14 17:46:11,147 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-14 17:46:11,155 INFO org.springframework.boot.StartupInfoLogger [main] Started PandemicUnemploymentInsuranceApplication in 23.77 seconds (JVM running for 25.03)
+2020-04-14 17:46:18,581 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-14 17:46:18,582 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-04-14 17:46:18,583 DEBUG org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Detected StandardServletMultipartResolver
+2020-04-14 17:46:18,608 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-14 17:46:18,609 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 26 ms
+2020-04-14 17:46:18,682 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 17:46:18,692 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 17:46:18,750 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Exiting from "ERROR" dispatch, status 401
+2020-04-14 17:46:29,232 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 17:46:29,235 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 17:46:29,237 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 401
+2020-04-14 17:53:57,632 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 17:53:57,648 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 17:53:57,672 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 401
+2020-04-14 17:56:11,084 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 17:56:11,097 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 18:02:37,855 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 18:02:37,872 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 18:02:37,887 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Exiting from "ERROR" dispatch, status 401
+2020-04-14 18:03:23,279 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-7] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 18:03:23,293 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 18:03:23,297 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-7] Exiting from "ERROR" dispatch, status 401
+2020-04-14 18:06:11,105 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 18:06:11,109 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 18:12:16,296 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-9] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 18:12:16,327 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 18:12:16,349 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Exiting from "ERROR" dispatch, status 401
+2020-04-14 18:13:07,642 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-10] "ERROR" dispatch for POST "/error", parameters={masked}
+2020-04-14 18:13:07,660 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-04-14 18:13:07,763 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-10] Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2020-04-14 18:13:07,769 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-10] Writing [{timestamp=Tue Apr 14 18:13:07 IST 2020, status=401, error=Unauthorized, message=Unauthorized, path= (truncated)...]
+2020-04-14 18:13:07,938 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Exiting from "ERROR" dispatch, status 401
+2020-04-14 18:15:44,316 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-2] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 18:15:44,335 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 18:15:44,353 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Exiting from "ERROR" dispatch, status 401
+2020-04-14 18:16:11,113 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 18:16:11,114 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 18:16:52,376 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 18:16:52,384 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 18:16:52,387 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Exiting from "ERROR" dispatch, status 401
+2020-04-14 18:17:01,984 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 18:17:01,986 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 18:17:01,991 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Exiting from "ERROR" dispatch, status 401
+2020-04-14 18:26:11,121 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 18:26:11,129 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 18:31:59,311 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m2s201ms).
+2020-04-14 18:40:43,406 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 18:40:43,417 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 18:50:44,366 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 18:50:44,396 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 18:57:57,456 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-7] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 18:57:57,470 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 18:57:57,488 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-7] Exiting from "ERROR" dispatch, status 401
+2020-04-14 19:00:44,404 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 19:00:44,431 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 19:01:18,709 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-9] "ERROR" dispatch for OPTIONS "/error", parameters={}
+2020-04-14 19:01:18,724 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$EmptyHandler#handle()
+2020-04-14 19:01:18,734 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-9] Exiting from "ERROR" dispatch, status 401
+2020-04-14 19:01:47,649 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-10] POST "/oauth/token", parameters={masked}
+2020-04-14 19:01:48,259 INFO CustomUserDetailsService [http-nio-8080-exec-10] Granted Authorities --> ROLE_ADMN
+2020-04-14 19:01:48,416 INFO org.springframework.security.oauth2.provider.token.store.JdbcTokenStore [http-nio-8080-exec-10] Failed to find access token for token ee17b139-a522-4405-98b0-015383b40ec2
+2020-04-14 19:01:48,466 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-10] Found 'Content-Type:application/json;charset=UTF-8' in response
+2020-04-14 19:01:48,498 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-10] Writing [ee17b139-a522-4405-98b0-015383b40ec2]
+2020-04-14 19:01:48,501 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-10] Completed 200 OK
+2020-04-14 19:02:19,658 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] POST "/oauth/token", parameters={masked}
+2020-04-14 19:02:19,697 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-8080-exec-1] Using @ExceptionHandler org.springframework.security.oauth2.provider.endpoint.TokenEndpoint#handleException(OAuth2Exception)
+2020-04-14 19:02:19,699 WARN org.springframework.security.oauth2.provider.endpoint.TokenEndpoint [http-nio-8080-exec-1] Handling error: InvalidRequestException, Missing grant type
+2020-04-14 19:02:19,714 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-04-14 19:02:19,715 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] Writing [error="invalid_request", error_description="Missing grant type"]
+2020-04-14 19:02:19,723 DEBUG org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [error="invalid_request", error_description="Missing grant type"]
+2020-04-14 19:02:19,724 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed 400 BAD_REQUEST
+2020-04-14 19:02:29,228 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] POST "/oauth/token", parameters={masked}
+2020-04-14 19:02:29,249 INFO CustomUserDetailsService [http-nio-8080-exec-3] Granted Authorities --> ROLE_ADMN
+2020-04-14 19:02:29,283 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Found 'Content-Type:application/json;charset=UTF-8' in response
+2020-04-14 19:02:29,285 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [ee17b139-a522-4405-98b0-015383b40ec2]
+2020-04-14 19:02:29,289 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2020-04-14 19:10:44,462 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 19:10:44,483 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 19:10:48,414 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] POST "/oauth/token", parameters={masked}
+2020-04-14 19:10:48,558 INFO CustomUserDetailsService [http-nio-8080-exec-5] Granted Authorities --> ROLE_ADMN
+2020-04-14 19:10:48,654 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Found 'Content-Type:application/json;charset=UTF-8' in response
+2020-04-14 19:10:48,674 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] Writing [ee17b139-a522-4405-98b0-015383b40ec2]
+2020-04-14 19:10:48,709 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Completed 200 OK
+2020-04-14 19:11:13,375 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] GET "/oauth/check_token?token=ee17b139-a522-4405-98b0-015383b40ec2", parameters={masked}
+2020-04-14 19:11:13,498 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2020-04-14 19:11:13,500 INFO CustomUserDetailsService [http-nio-8080-exec-6] Granted Authorities --> ROLE_ADMN
+2020-04-14 19:11:13,502 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [{lastName=Name, functions=[Ljava.lang.String;@2c512610, user_name=user, roles=[Ljava.lang.String;@36 (truncated)...]
+2020-04-14 19:11:13,559 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2020-04-14 19:20:44,507 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 19:20:44,521 INFO CacheScheduler [scheduling-1] Clear user cache : END
+2020-04-14 19:30:44,539 INFO CacheScheduler [scheduling-1] Clear user cache : START
+2020-04-14 19:30:44,555 INFO CacheScheduler [scheduling-1] Clear user cache : END

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">192.168.15.13</domain>
+        <domain includeSubdomains="true">192.168.43.52</domain>
+        <domain includeSubdomains="true">35.224.74.22</domain>
+        <domain includeSubdomains="true">productbazar.in</domain>
+        <domain includeSubdomains="true">35.244.165.151</domain>
+    </domain-config>
+</network-security-config>

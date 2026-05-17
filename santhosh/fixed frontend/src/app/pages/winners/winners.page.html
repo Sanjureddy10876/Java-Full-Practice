@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>View Winners</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="app-background">
+
+  <p-dialog [(visible)]="display" modal="true" dismissableMask="true">
+    <mat-video src="{{util.getFullUrl('file/') + videoToPlay}}" 
+               [autoplay]="true" [preload]="true" [fullscreen]="true" [download]="false" color="accent" spinner="spin" 
+               [overlay]="true" [playsinline]="false" style="height: 320px;">
+    </mat-video>
+  </p-dialog>
+
+  <ion-item *ngIf="showError && winners.length < 1">
+    <ion-label color="danger" class="ion-text-center"><b>No Records Found.</b></ion-label>
+  </ion-item>
+
+  <!-- Dots -->
+  <div class="ion-text-center" *ngIf="showProgress">
+    <ion-spinner name="dots" color="primary"></ion-spinner> 
+  </div>
+
+  <ion-grid fixed *ngIf="!showProgress">
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let winner of winners">
+        <ion-card>
+          <ion-card-header>
+            <ion-item detail="false" lines="full">
+              <ion-avatar slot="start">
+                <img src="{{util.getFullUrl('file/') + winner.compPhoto}}" *ngIf="winner.compPhoto"/>
+                <img src="../../../assets/img/win.jpeg" *ngIf="!winner.compPhoto"/>
+              </ion-avatar>
+              <ion-label class="ion-text-wrap">
+                <h1>{{winner.compTitle}}</h1>
+                <p>{{winner.compDesc}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-list lines="none">
+              <ion-item detail="false" *ngFor="let dtl of winner.winners">
+                <ion-avatar slot="start">
+                  <ion-img [src]="'../../../assets/img/'+ (dtl.gender == 'F' ? 'female.jpg' : 'male.jpg')" *ngIf="!dtl.userProfile"></ion-img>
+                  <ion-img [src]="util.getFullUrl('file/') + dtl.userProfile" *ngIf="dtl.userProfile"></ion-img>
+                </ion-avatar>
+                <ion-label class="ion-text-wrap">
+                  <h2><b>{{dtl.fullUserName}}, {{dtl.age}}</b></h2>
+                  <p>{{dtl.city}}, {{mst.getStateDescByKey(dtl.state)}}</p>
+                  <p>Position: {{getPositionDescription(dtl)}}</p>
+                </ion-label>
+                <ion-button fill="outline" slot="end" (click)="viewVideo($event, dtl.fileId)" *ngIf="dtl.fileId" color="primary">
+                  Song
+                  <ion-icon name="musical-notes-sharp" slot="end"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<app-footer></app-footer>

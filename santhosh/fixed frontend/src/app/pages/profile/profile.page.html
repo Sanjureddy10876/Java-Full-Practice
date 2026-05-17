@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="userDetailsForm">
+    <div class="card">
+      <div class="header">
+        <div class="avatar">
+        <ion-avatar>
+          <ion-img src="../../../assets/img/male.jpg" *ngIf="!profilePhoto.value && gender.value == 'M'"></ion-img>
+          <ion-img src="../../../assets/img/female.jpg" *ngIf="!profilePhoto.value && gender.value == 'F'"></ion-img>
+          <ion-img [src]="util.getFullUrl('file/') + profilePhoto.value" *ngIf="profilePhoto.value"></ion-img>
+          </ion-avatar>
+        </div>
+        <div class="ion-text-center" style="padding-top: 60px; padding-left: 120px;">
+          <app-multi-file-upload id="profilePhoto" icon="true" [formControl]="profilePhoto"></app-multi-file-upload>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="user-meta ion-text-center">
+          <h3 class="playername">{{fname.value}} {{lname.value}}</h3>
+          <h5 class="country">India</h5>
+        </div>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item >
+              <ion-label position="floating">First Name </ion-label>
+              <ion-input type="text"  maxlength="30" [formControl]="fname"></ion-input>
+            </ion-item>
+            <app-error [condition]="fname.touched && fname.invalid" msg="Please enter first name."></app-error>
+          </ion-col>
+          <ion-col>
+            <ion-item >
+              <ion-label position="floating">Middle Name</ion-label>
+              <ion-input type="text"  maxlength="30" [formControl]="mname"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Last Name </ion-label>
+              <ion-input type="text"  maxlength="30" [formControl]="lname"></ion-input>
+            </ion-item>
+            <app-error [condition]="lname.touched && lname.invalid" msg="Please enter last name."></app-error>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Gender</ion-label>
+              <ion-select placeholder="--Select Gender--" [formControl]="gender">
+                <ion-select-option value="F">Female</ion-select-option>
+                <ion-select-option value="M">Male</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <app-error [condition]="gender.touched && gender.invalid" msg="Please select gender."></app-error>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Date Of Birth </ion-label>
+              <ion-datetime displayFormat="DD/M/YYYY" [formControl]="dob" readonly="true"></ion-datetime>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Country</ion-label>
+              <ion-select placeholder="--Select Country--" [formControl]="country">
+                <ion-select-option value="IN" selected="true">India</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <app-error [condition]="country.touched && country.invalid" msg="Please select country."></app-error>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">State</ion-label>
+              <ion-select placeholder="--Select State--" [formControl]="state">
+                <ion-select-option *ngFor="let state of states" value="{{state.key}}">{{state.desc}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <app-error [condition]="state.touched && state.invalid" msg="Please select state."></app-error>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Enter City</ion-label>
+              <ion-input type="text" [formControl]="city" maxlength="40"></ion-input>
+            </ion-item>
+            <app-error [condition]="city.touched && city.invalid" msg="Please enter city."></app-error>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div class="ion-padding ion-justify-content-center">
+        <ion-button shape="round" type="submit" [disabled]="userDetailsForm.invalid" expand="block" (click)="updateUser()">
+          <ion-icon name="arrow-up-circle-outline"></ion-icon>
+          Update
+        </ion-button>
+      </div>
+    </div>
+  </form>
+</ion-content>
+
+<app-footer></app-footer>

@@ -1,0 +1,35 @@
+.drop-zone { 
+    //background-color: #f6f6f6;
+    //border: dotted 3px #dedddd; 
+    //height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //margin: 20px 0;
+}
+
+
+
+    input[type="file"] {
+        display: none;
+    }
+
+
+.nv-file-over { 
+    //border: dotted 3px red; 
+}
+
+.divL, .divR {
+    box-sizing: border-box;
+    
+    padding: 15px;
+    //border: dotted 3px #dedddd;
+  }
+  .divL {
+      float: left;
+    //background: #ffe9c6;
+  }
+  .divR {
+    //background: #ffdad8;
+    float: right;
+  }

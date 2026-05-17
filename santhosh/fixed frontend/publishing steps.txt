@@ -1,0 +1,16 @@
+# Generate Keystore
+# WARNING: Save this file and keep it somewhere safe. If it is lost the Google Play Store will not accept updates for this app!
+
+keytool -genkey -v -keystore surshree-prod.keystore -alias surshree -keyalg RSA -keysize 2048 -validity 10000
+password: surshree
+
+# Generate Release APK
+1. ionic cordova build android --prod --release
+
+# Signing the jar
+1. jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore surshree-prod.keystore /Users/ptiwari/Documents/project/ss/frontend/pua/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk surshree
+password: surshree
+
+# Zipalign apk
+1. cd /Users/ptiwari/Documents/project/ss/frontend/pua/platforms/android/app/build/outputs/apk/release/
+2. /Users/ptiwari/Library/Android/sdk/build-tools/29.0.2/zipalign -v 4 app-release-unsigned.apk surshree-1.0.apk

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Manage</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/manage-competition-entries', '']" *ngIf="ls.hasFunction('FUNC_VIEW_ADMIN_MENU')">
+        <ion-icon slot="end" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Search Criteria</ion-card-title>
+      <ion-card-subtitle class="ion-text-center" color="tertiary">Enter/Select more values for refiend search</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Competition ID</ion-label>
+        <ion-input maxlength="6" type="tel" [formControl]="compId"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Competition Start Date</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [formControl]="startDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Competition End Date</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [formControl]="endDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Status</ion-label>
+        <ion-select placeholder="--Select Status--" [formControl]="isActive">
+          <ion-select-option value="1">Active</ion-select-option>
+          <ion-select-option value="0">Inactive</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Result Status</ion-label>
+        <ion-select placeholder="--Select Result Status--" [formControl]="isWinnerAnnounced">
+          <ion-select-option value="1">Winner Announced</ion-select-option>
+          <ion-select-option value="0">Winner Not Announced</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br/>
+      <div class="ion-text-center">
+        <ion-button shape="round" (click)="search()">
+          <ion-icon name="search-outline" slot="start" ></ion-icon>
+          Search
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list *ngIf="competitions.length > 0">
+    <ion-list-header class="ion-text-center">
+        <ion-label color="tertiary">Showing All <b>{{competitions.length}}</b> Results</ion-label>
+    </ion-list-header>
+
+    <ion-item button detail *ngFor="let comp of competitions let i = index" [routerLink]="['/upload-entry', comp.competitionId]">
+      <ion-thumbnail slot="start">
+        <img src="{{util.getFullUrl('file/') + comp.compPhoto}}">
+      </ion-thumbnail>
+      <ion-label color="tertiary" class="ion-text-wrap">
+        <h3>{{i + 1}} {{comp.title}}</h3>
+        <p>{{comp.description}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <br/>
+
+  <ion-item *ngIf="showError && competitions.length < 1">
+    <ion-label color="danger" class="ion-text-center"><b>No Records Found.</b></ion-label>
+  </ion-item>
+
+  <!-- Dots -->
+  <div class="ion-text-center" *ngIf="showProgressBar">
+    <ion-spinner name="dots" color="primary"></ion-spinner> 
+  </div>
+
+</ion-content>
+<app-footer></app-footer>

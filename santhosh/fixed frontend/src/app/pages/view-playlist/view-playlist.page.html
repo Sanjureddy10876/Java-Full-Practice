@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="model">{{model.trainingName}} Playlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="app-background">
+  <div *ngIf="currentlyPlaying">
+    <mat-video src="{{util.getFullUrl('file/') + currentlyPlaying.contentId}}" title="{{currentlyPlaying.trainingContentName}}" 
+               [autoplay]="true" [preload]="true" [fullscreen]="true" [download]="false" color="accent" spinner="spin" 
+               [overlay]="true" [playsinline]="false" style="height: 320px;">
+    </mat-video>
+    <br/>
+    <ion-label class="ion-padding" color="primary"><b>{{currentlyPlaying.trainingContentName}}</b></ion-label><br/>
+    <ion-label class="ion-padding">{{currentlyPlaying.trainingContentDesc}}</ion-label>
+  </div>
+  <hr/>
+  <div *ngIf="model">
+    <ion-item button (click)="playme(tc)" *ngFor="let tc of model.trainingContents" lines="full">
+      <ion-thumbnail slot="start">
+        <img src="{{util.getFullUrl('file/') + model.trainingPhoto}}">
+      </ion-thumbnail>
+      <ion-label>
+        <ion-text color="primary">{{tc.trainingContentName}}</ion-text>
+        <p>{{tc.trainingContentDesc}}</p>
+      </ion-label>
+      <ion-icon name="play-circle-sharp" slot="end"></ion-icon>
+    </ion-item>
+  </div>
+</ion-content>
+
+<app-footer></app-footer>

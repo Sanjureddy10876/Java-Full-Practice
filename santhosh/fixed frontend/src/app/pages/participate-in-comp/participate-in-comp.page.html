@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Participate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="app-background">
+  <ion-grid>
+    <ion-row >
+      <ion-col *ngFor="let c of contests" size-md="4" size-lg="4" size-xs="12" size-sm="12">
+        <ion-card button="true" (click)="openSubmittedEntryPage(c.competitionId)" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+          <ion-card-content class="ion-text-justify" style="padding: 0px;">
+            <div class="app-card-img">
+              <img src="{{util.getFullUrl('file/') + c.compPhoto}}" *ngIf="c.compPhoto" style="border-radius: 10px;"/>
+            </div>
+            <div class="ion-padding">
+              <ion-card-title style="font-size: 28px;">{{c.title}}</ion-card-title>
+              <ion-card-subtitle>Category: <b>{{mst.getCategoryDescByKey(c.competitionCategory)}}</b></ion-card-subtitle>
+              {{c.description}}
+              <br/><br/>
+  
+              <div class="">
+                <ion-chip color="success">
+                  <ion-icon name="checkmark-done-outline"></ion-icon>
+                  <ion-label>Age: <b>{{c.minAge}} - {{c.maxAge}}</b></ion-label>
+                </ion-chip>
+  
+                <ion-chip color="success">
+                  <ion-icon name="checkmark-done-outline"></ion-icon>
+                  <ion-label>Fee: <b>{{c.subscriptionPrice != null ? 'Rs. ' + c.subscriptionPrice : 'Free'}}</b></ion-label>
+                </ion-chip>
+  
+                <ion-chip color="success">
+                  <ion-icon name="checkmark-done-outline"></ion-icon>
+                  <ion-label>Date: <b>{{util.getEnteredDateDDMMYYYY(c.startTime)}} - {{util.getEnteredDateDDMMYYYY(c.endTime)}}</b></ion-label>
+                </ion-chip>
+              </div>
+              <div class="" *ngIf="c.isUserEnrolled != true">
+                <ion-button fill="outline" shape="round" (click)="enroll(c)" color="secondary">
+                  <ion-icon name="cash-outline" slot="start"></ion-icon>
+                  Enroll
+                </ion-button>
+              </div>
+  
+              <ion-grid *ngIf="c.isUserEnrolled == true">
+                <ion-row>
+                  <ion-col size="12" class="ion-text-center">
+                    <ion-chip color="success">
+                      <ion-icon name="checkmark-done-outline"></ion-icon>
+                      <ion-label>Enrolled</ion-label>
+                    </ion-chip>
+                    <br/>
+                    <ion-text>Tap on card to view more details or upload your entry.</ion-text>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col *ngIf="!contests || contests.length < 1">
+        <div class="ion-text-center">
+          <ion-label color="danger">No Compitition Present.</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<app-footer></app-footer>

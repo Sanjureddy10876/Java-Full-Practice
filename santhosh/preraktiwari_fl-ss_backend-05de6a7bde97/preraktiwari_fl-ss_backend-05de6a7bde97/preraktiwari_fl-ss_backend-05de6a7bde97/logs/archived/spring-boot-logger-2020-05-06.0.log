@@ -1,0 +1,88 @@
+2020-05-06 10:30:21,808 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h52m7s219ms).
+2020-05-06 10:30:47,454 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=25s642ms), soft-evicting connections from pool.
+2020-05-06 10:36:28,086 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 10:36:28,094 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 10:41:49,102 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s485ms).
+2020-05-06 10:42:16,619 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=27s518ms), soft-evicting connections from pool.
+2020-05-06 10:47:57,101 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 10:47:57,105 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 10:57:57,071 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 10:57:57,080 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 11:07:57,119 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 11:07:57,127 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 11:17:57,170 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 11:17:57,180 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 11:36:27,462 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m10s618ms).
+2020-05-06 11:36:54,160 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=26s698ms), soft-evicting connections from pool.
+2020-05-06 11:45:34,478 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 11:45:34,489 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 12:00:16,256 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m52s4ms).
+2020-05-06 12:00:42,966 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=26s714ms), soft-evicting connections from pool.
+2020-05-06 12:06:31,276 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m18s283ms).
+2020-05-06 12:06:38,458 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 12:06:38,469 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 12:06:58,306 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=27s31ms), soft-evicting connections from pool.
+2020-05-06 12:16:38,465 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 12:16:38,475 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 12:34:45,514 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m17s71ms).
+2020-05-06 12:35:13,624 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s111ms), soft-evicting connections from pool.
+2020-05-06 12:36:22,209 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 12:36:22,210 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 12:46:22,207 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 12:46:22,229 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 12:56:22,233 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 12:56:22,242 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 13:03:15,537 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m1s787ms).
+2020-05-06 13:10:54,002 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 13:10:54,013 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 13:20:54,038 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 13:20:54,055 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 13:30:54,052 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 13:30:54,053 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 13:40:54,076 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 13:40:54,086 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 13:49:16,895 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m1s101ms).
+2020-05-06 13:49:43,481 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=26s587ms), soft-evicting connections from pool.
+2020-05-06 13:52:21,734 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 13:52:21,743 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 13:57:52,184 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m38s681ms).
+2020-05-06 13:58:18,915 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=26s731ms), soft-evicting connections from pool.
+2020-05-06 14:14:32,428 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m43s487ms).
+2020-05-06 14:14:59,758 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=27s332ms), soft-evicting connections from pool.
+2020-05-06 14:20:37,948 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 14:20:37,959 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 14:30:37,967 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 14:30:37,980 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 15:01:54,325 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m24s445ms).
+2020-05-06 15:02:21,199 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=26s875ms), soft-evicting connections from pool.
+2020-05-06 15:10:29,287 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 15:10:29,295 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 15:20:29,308 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 15:20:29,316 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 15:30:29,313 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 15:30:29,315 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 15:40:29,337 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 15:40:29,346 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 15:47:44,937 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m53s434ms).
+2020-05-06 16:58:12,286 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h7m27s314ms).
+2020-05-06 16:58:38,889 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=26s603ms), soft-evicting connections from pool.
+2020-05-06 18:12:00,357 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h12m51s463ms).
+2020-05-06 18:14:08,153 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 18:14:08,162 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 18:24:08,154 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 18:24:08,168 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 18:34:08,175 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 18:34:08,191 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 18:43:52,502 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m51s931ms).
+2020-05-06 18:49:30,151 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 18:49:30,169 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 18:56:50,700 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m58s261ms).
+2020-05-06 19:00:58,297 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 19:00:58,325 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 19:10:58,321 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 19:10:58,354 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 19:17:19,508 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s892ms).
+2020-05-06 19:21:32,383 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 19:21:32,384 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END
+2020-05-06 19:31:32,372 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : START
+2020-05-06 19:31:32,381 INFO com.surshree.app.scheduling.CacheScheduler [scheduling-1] Clear user cache : END

@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: ${APP_CONTEXT:surshree}
+  datasource:
+#    url: jdbc:postgresql://postgresql-14719-0.cloudclusters.net:14720/DBSSPROD?connectTimeout=10&socketTimeout=30
+#    username: pgadmin
+#    password: Test@123
+
+    url: jdbc:postgresql://localhost:5432/surshri?connectTimeout=10&socketTimeout=30
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    tomcat:
+      test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 600000
+      validation-query: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      jdbc:
+        use_streams_for_binary: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: IST
+    serialization:
+      write-dates-as-timestamps: false
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  cloud:
+    kubernetes:
+      enabled: false
+
+server:
+  servlet:
+    contextPath: /${APP_CONTEXT:surshree}
+
+logging:
+  level:
+    org:
+      springframework: INFO
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhot:8080/oauth/check_token
+      filter-order: 3
+    client:
+      client-id: mobile
+      client-secret: pin

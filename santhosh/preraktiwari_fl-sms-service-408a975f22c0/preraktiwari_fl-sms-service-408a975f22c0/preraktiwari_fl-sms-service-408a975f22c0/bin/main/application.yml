@@ -1,0 +1,44 @@
+javers:
+  newObjectSnapshot: true
+
+server:
+  port: 9011
+  servlet:
+    contextPath: /sms-service
+    
+spring:
+  application:
+    name: sms-service
+  datasource:
+#    url: jdbc:postgresql://${PG_HOSTNAME:localhost}:${PG_PORT:5432}/${PG_DB_NAME:test}
+#    username: ${PG_USER:postgres}
+#    password: ${PG_PASS:postgres}
+    url: jdbc:postgresql://postgresql-14719-0.cloudclusters.net:14720/DBSSPROD?connectTimeout=10&socketTimeout=10
+    username: pgadmin
+    password: Test@123
+    driver-class-name: org.postgresql.Driver
+    tomcat:
+      test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 600000
+      validation-query: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  security:
+    user:
+      name: user
+      password: pass
+        
+logging:
+  level:
+    org.springframework.*: INFO
+    gov.* : INFO
+    org.hibernate.envers.*: DEBUG
+ 
+app.service.STATE: MS

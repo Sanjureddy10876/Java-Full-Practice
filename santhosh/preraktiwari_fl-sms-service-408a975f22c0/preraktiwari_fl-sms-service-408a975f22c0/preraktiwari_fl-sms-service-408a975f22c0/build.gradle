@@ -1,0 +1,82 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	
+    id "com.palantir.docker" version "0.25.0"
+	id "com.palantir.docker-run" version "0.22.1"
+}
+
+group = 'com.app.service'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+	
+}
+
+springBoot {
+    buildInfo()
+}
+
+repositories {
+	mavenCentral()
+}
+
+task unpack(type: Copy) {
+	project.version = project.findProperty('buildno') ?: 'latest'
+	println "Build Version is ${project.version}"
+	delete("build/dependency")
+	dependsOn bootJar
+	from(zipTree(tasks.bootJar.outputs.files.singleFile))
+	into("build/dependency")
+}
+
+docker {
+	dependsOn unpack
+
+	name "preraktiwari/sms:${project.version}"
+	tag 'stable', "preraktiwari/sms:${project.version}"
+
+
+	copySpec.from(tasks.unpack.outputs).into("dependency")
+	buildArgs(['DEPENDENCY': "dependency"])
+	labels(['env': 'home'])
+}
+
+dependencies {
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	implementation "io.springfox:springfox-boot-starter:3.0.0"
+	
+	// https://mvnrepository.com/artifact/software.amazon.awssdk/bom
+	runtimeOnly group: 'software.amazon.awssdk', name: 'bom', version: '2.16.38', ext: 'pom'
+	
+	implementation "org.junit.platform:junit-platform-commons:1.4.0"
+	implementation 'software.amazon.awssdk:pinpointsmsvoice:2.16.39'
+	implementation group: 'software.amazon.awssdk', name: 'pinpoint', version: '2.16.38'
+	implementation "com.google.code.gson:gson:2.8.4"
+	
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '23.0'
+    implementation('org.postgresql:postgresql')
+    
+    compile "org.docx4j:docx4j-JAXB-Internal:8.0.0"
+	compile "org.docx4j:docx4j-JAXB-ReferenceImpl:8.0.0"
+	compile "org.docx4j:docx4j-JAXB-MOXy:8.0.0"
+	compile "org.docx4j:docx4j-export-fo:8.0.0"
+	
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,56 @@
+
+<ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size-md="6" size-lg="5" size-xs="12">
+      <ion-card>
+        <ion-card-header class="ion-text-center">
+          <ion-label *ngIf="question">{{question}}</ion-label> 
+          <ion-img class="ion-padding" [src]="util.getFullUrl('file/') + src" ></ion-img>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-radio-group [(ngModel)]="qResponse" (ionChange)="emitValue()" >
+            <ion-row >
+              <ion-col>
+                <ion-item lines="none">
+                  <ion-label><b>1.</b> {{options[0]}}</ion-label>
+                  <ion-radio value="1" [disabled]="disabled"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <hr class="vertical-ruler"/>
+              <ion-col>
+                <ion-item lines="none">
+                  <ion-label><b>2.</b> {{options[1]}}</ion-label>
+                  <ion-radio value="2" [disabled]="disabled"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <hr class="horizontal-ruler"/>
+            <ion-row>
+              <ion-col>
+                <ion-item lines="none">
+                  <ion-label><b>3.</b> {{options[2]}}</ion-label>
+                  <ion-radio value="3" [disabled]="disabled"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <hr class="vertical-ruler"/>
+              <ion-col>
+                <ion-item lines="none">
+                  <ion-label><b>4.</b> {{options[3]}}</ion-label>
+                  <ion-radio value="4" [disabled]="disabled"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-radio-group>
+          <ion-row>
+            <ion-col class="ion-text-center">
+              <ion-label *ngIf="showStatus" [color]="color" class="ion-padding">
+                {{msg}}
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+    

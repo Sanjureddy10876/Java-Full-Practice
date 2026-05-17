@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.org.thinkcloud</groupId>
+    <artifactId>think-cloud-build</artifactId>
+    <version>2.0.0.RELEASE</version>
+  </parent>
+  <groupId>kodewala</groupId>
+  <artifactId>junit-sample</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <properties>
+    <rversion>2.0.0.RELEASE</rversion>
+  </properties>
+  <!--OWN Dependencies -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>junit-sample-domain</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>junit-sample-repo-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>junit-sample-biz-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>junit-sample-manager-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>junit-sample-commons</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <!-- Source: https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync -->
+<dependency>
+    <groupId>org.mongodb</groupId>
+    <artifactId>mongodb-driver-sync</artifactId>
+    <version>5.6.2</version>
+    <scope>compile</scope>
+</dependency>
+    </dependencies>
+  </dependencyManagement>
+  <modules>
+    <module>junit-sample-domain</module>
+    <module>junit-sample-commons</module>
+    <module>junit-sample-repo-api</module>
+    <module>junit-sample-biz-api</module>
+    <module>junit-sample-manager-api</module>
+    <module>junit-sample-biz-provider</module>
+    <module>junit-sample-repo-provider</module>
+    <module>junit-sample-manager-provider</module>
+    <module>junit-sample-ctl</module>
+  </modules>
+</project>

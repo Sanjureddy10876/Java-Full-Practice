@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card (click)="expandItem(faq)" *ngFor="let faq of faqs; let i = index">
+    <ion-card-header>
+      <ion-card-subtitle [color]="faq.expanded ? 'primary' : ''">{{i +1}}. {{faq.q}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<app-footer></app-footer>

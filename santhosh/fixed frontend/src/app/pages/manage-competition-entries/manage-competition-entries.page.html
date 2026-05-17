@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add/Update Competitions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="compForm">
+    <input type="hidden" [formControl]="competitionId"/>
+    <ion-item>
+      <ion-label position="floating">Category <label style="color: red !important;">*</label></ion-label>
+      <ion-select placeholder="--Select Category--" [formControl]="competitionCategory">
+        <ion-select-option value="DALY">Daily</ion-select-option>
+        <ion-select-option value="WKLY">Weekly</ion-select-option>
+        <ion-select-option value="MTLY">Monthly</ion-select-option>
+        <ion-select-option value="YRLY">Yearly</ion-select-option>
+      </ion-select>
+    </ion-item> 
+    <app-error [condition]="competitionCategory.touched && competitionCategory.invalid" msg="Please select categoty."></app-error>
+    <ion-item>
+      <ion-label position="floating">Enter Title <label style="color: red !important;">*</label></ion-label>
+      <ion-input type="text" [formControl]="title" maxlength="100" ></ion-input>
+    </ion-item>
+    <app-error [condition]="title.touched && title.invalid" msg="Please enter title."></app-error>
+    <ion-item>
+      <ion-label position="floating">Enter Description <label style="color: red !important;">*</label></ion-label>
+      <ion-input type="text" [formControl]="description" maxlength="1000"></ion-input>
+    </ion-item>
+    <app-error [condition]="description.touched && description.invalid" msg="Please enter description."></app-error>
+    <ion-item>
+      <ion-label position="floating">Enter Start Date <label style="color: red !important;">*</label></ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [formControl]="startTime"></ion-datetime>
+    </ion-item>
+    <app-error [condition]="startTime.touched && startTime.invalid" msg="Please enter start date."></app-error>
+    <ion-item>
+      <ion-label position="floating">Enter End Date <label style="color: red !important;">*</label></ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [formControl]="endTime"></ion-datetime>
+    </ion-item>
+    <app-error [condition]="endTime.touched && endTime.invalid" msg="Please enter end date."></app-error>
+    <ion-item>
+      <ion-label position="floating">Enter Minimum Age <label style="color: red !important;">*</label></ion-label>
+      <ion-input type="tel" [formControl]="minAge" maxlength="2"></ion-input>
+    </ion-item>
+    <app-error [condition]="minAge.touched && minAge.invalid" msg="Please enter minimum age."></app-error>
+    <ion-item>
+      <ion-label position="floating">Enter Maximum Age <label style="color: red !important;">*</label></ion-label>
+      <ion-input type="tel" [formControl]="maxAge" maxlength="2"></ion-input>
+    </ion-item>
+    <app-error [condition]="maxAge.touched && maxAge.invalid" msg="Please enter maximum age."></app-error>
+    <ion-item>
+      <ion-label position="floating">Subscription Require? <label style="color: red !important;">*</label></ion-label>
+      <ion-select placeholder="--Select Subscription Require--" [formControl]="isSubscriptionRequired">
+        <ion-select-option value="1">Yes</ion-select-option>
+        <ion-select-option value="0">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <app-error [condition]="isSubscriptionRequired.touched && isSubscriptionRequired.invalid" msg="Please enter seubscription required."></app-error>
+    
+    <ion-item *ngIf="isSubscriptionRequired.value == '1'">
+      <ion-label position="floating">Enter Subscription Price <label style="color: red !important;">*</label></ion-label>
+      <ion-input type="tel" [formControl]="subscriptionPrice" maxlength="2"></ion-input>
+    </ion-item>
+    <app-error [condition]="subscriptionPrice.touched && subscriptionPrice.invalid" msg="Please enter subscription price."></app-error>
+
+    <ion-item>
+      <ion-label position="floating">Status <label style="color: red !important;">*</label></ion-label>
+      <ion-select placeholder="--Select Status--" [formControl]="isActive">
+        <ion-select-option value="1">Active</ion-select-option>
+        <ion-select-option value="0">Inactive</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <app-error [condition]="isActive.touched && isActive.invalid" msg="Please select status."></app-error>
+    <ion-item>
+      <ion-label position="floating">Result Status <label style="color: red !important;">*</label></ion-label>
+      <ion-select placeholder="--Select Result Status--" [formControl]="isWinnerAnnounced" readonly="true">
+        <ion-select-option value="1">Winner Announced</ion-select-option>
+        <ion-select-option value="0" selected="true">Winner Not Announced</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <app-error [condition]="isWinnerAnnounced.touched && isWinnerAnnounced.invalid" msg="Please select result status."></app-error>
+
+    <app-multi-file-upload [formControl]="compPhoto" msg="Upload Competition Image" id="uploadCompPhoto" format="png, jpeg, jpg"></app-multi-file-upload>
+    <app-error [condition]="compPhoto.invalid" msg="Please upload pompetition image." ></app-error>
+
+    <div class="ion-padding ion-justify-content-center">
+      <ion-button shape="round" type="submit"  expand="block" (click)="saveComp()" [disabled]="compForm.invalid">
+        <ion-icon name="cloud-upload" slot="start"></ion-icon>
+        Save
+      </ion-button>
+    </div>
+  </form>
+</ion-content>
+<app-footer></app-footer>

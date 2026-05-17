@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gateway-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /surshree/*
+            backend:
+              serviceName: ss-uat-backend
+              servicePort: 8080
+          - path: /gsapp/*
+            backend:
+              serviceName: gv-uat-backend
+              servicePort: 8080
+          - path: /webapp/*
+            backend:
+              serviceName: gv-uat-frontend
+              servicePort: 80
+

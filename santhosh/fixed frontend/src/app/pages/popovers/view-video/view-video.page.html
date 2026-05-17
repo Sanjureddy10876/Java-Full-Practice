@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="small">View Video</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <video class="ion-padding" src="{{util.getFullUrl('file/') + id}}" width="220" height="140" plays-inline controls="controls" controls preload="metadata" webkit-playsinline="webkit-playsinline" ></video>
+</ion-content>

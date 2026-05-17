@@ -1,0 +1,222 @@
+<head>
+  <script>
+    MirageLanding = {
+        addClass: function (element, className) {
+          if (element.classList)
+            element.classList.add(className);
+          else
+            element.className += ' ' + className;
+        },
+
+        removeClass: function (element, className) {
+          if (element.classList)
+            element.classList.remove(className);
+          else
+            element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        },
+
+        hasClass: function (element, className) {
+          if (element.classList)
+            return element.classList.contains(className);
+          else
+            return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
+        },
+
+        hideMenu: function () {
+          this.removeClass(document.getElementById('landing-menu'), 'landing-menu-active');
+          this.removeClass(document.getElementById('landing-menu-button'), 'landing-menu-active');
+          this.removeClass(document.getElementById('landing-mask'), 'landing-menu-active');
+        },
+
+        showMenu: function () {
+          this.addClass(document.getElementById('landing-menu'), 'landing-menu-active');
+          this.addClass(document.getElementById('landing-menu-button'), 'landing-menu-active');
+          this.addClass(document.getElementById('landing-mask'), 'landing-menu-active');
+        }
+      };
+
+      document.getElementById('landing-menu-button').addEventListener('click', function (e) {
+        var menu = document.getElementById('landing-menu');
+
+        if (MirageLanding.hasClass(menu, 'landing-menu-active')) {
+          MirageLanding.hideMenu();
+        } else {
+          MirageLanding.showMenu();
+        }
+
+        e.preventDefault();
+      });
+
+      document.getElementById('landing-mask').addEventListener('click', function (e) {
+        MirageLanding.hideMenu();
+
+        e.preventDefault();
+      });
+
+      var menuLinks = document.querySelectorAll('#landing-menu a');
+      for (i = 0; i < menuLinks.length; i++) {
+        menuLinks[i].addEventListener('click', function (e) {
+          MirageLanding.hideMenu();
+        });
+      }
+  </script>
+</head>
+<ion-content>
+
+  <div class="landing-body" screen_capture_injected="true" style="">
+    <div class="landing-nav-menu">
+      <div class="logo">
+        <a href="#">
+          <img src="assets/img/logo.png" alt="mirage-layout">
+          <span class="app-name"></span>
+        </a>
+      </div>
+      <div class="nav-menu-wrapper">
+        <ul class="nav-menu" id="landing-menu">
+          <li>
+            <a href="/about-us">About</a>
+          </li>
+          <li>
+            <a href="landing#features">Galary</a>
+          </li>
+          <li>
+            <a href="landing#pricing">Registration</a>
+          </li>
+          <li>
+            <a href="landing#multimedia">Events</a>
+          </li>
+          <li>
+            <a href="landing#multimedia">Live Voting</a>
+          </li>
+          <li>
+            <a href="landing#multimedia">Contacts</a>
+          </li>
+        </ul>
+      </div>
+      <div class="buy-button">
+        <button type="button" class="p-button">
+          Login to World of Music!
+        </button>
+      </div>
+      <div class="menu-button">
+        <a href="landing#" class="landing-menu-button" id="landing-menu-button">
+          <div class="landing-menu-button-icon"></div>
+        </a>
+      </div>
+    </div>
+    <div id="home" class="landing-header-wrapper">
+      <div class="sun">
+        <img src="https://www.primefaces.org/mirage-ng/assets/layout/images/pages/landing/asset-sun.svg" alt="mirage-layout">
+      </div>
+      <div class="landing-header-content">
+        <h1>Surshree</h1>
+        <p>Singing Platform Promoted by Rotary International</p>
+        <div class="video-button">
+          <button>Watch Video</button>
+        </div>
+      </div>
+      <div class="tree">
+      </div>
+    </div>
+    <div id="meet-mirage" class="section">
+      <div class="section-title">
+        <h1>Meet Mentors</h1>
+      </div>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-card-img">
+            <img src="https://www.surshree.com/images/mentor2.jpg" alt="mirage-layout">
+          </div>
+          <div class="feature-card-title"> Prof. T Unnikrishnan </div>
+          <div class="feature-card-content"> Voice Culture Expert </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-img">
+            <img src="https://www.surshree.com/images/mentor1.jpg" alt="mirage-layout">
+          </div>
+          <div class="feature-card-title">Dhananjay Bhatt</div>
+          <div class="feature-card-content"> Vocalist & Groomer </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-img">
+            <img src="https://www.surshree.com/images/mentor3.jpg" alt="mirage-layout">
+          </div>
+          <div class="feature-card-title"> Nitin David</div>
+          <div class="feature-card-content"> Anchor & Skill Trainer </div>
+        </div>
+      </div>
+
+      <div class="buy-mirage-promo-wrapper">
+        <div class="buy-mirage-promo">
+          <div class="promo-content">
+            <h1>Join the World of Music now…</h1>
+            <p>When everyone else says 'YOU CAN'T', "सुरश्री" SAYS 'YES YOU CAN'</p>
+          </div>
+          <div class="promo-button">
+            <button>Register Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="features" class="section">
+      
+      <div class="effect">
+        <img src="https://www.primefaces.org/mirage-ng/assets/layout/images/pages/landing/effect-bottom-1.svg" alt="mirage-layout">
+      </div>
+    </div>
+    
+    <div id="multimedia" class="section">
+      <div class="section-title">
+        <h1>Our Latest New Videos</h1>
+      </div>
+      <div class="multimedia-video-wrapper">
+        <video width="400" controls="" style="padding: 10px;">
+          <source src="https://www.surshree.com/videos/sv1.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <video width="400" controls="" style="padding: 10px;">
+          <source src="https://www.surshree.com/videos/sv2.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <div class="effect">
+        <img src="https://www.primefaces.org/mirage-ng/assets/layout/images/pages/landing/effect-bottom.svg" alt="mirage-layout">
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo-text">
+        <img src="assets/img/logo.png" alt="mirage-layout">
+        <div class="text">
+          <h1>Surshree</h1>
+          <span>© COPYRIGHT 2018. ALL RIGHTS RESERVED.</span>
+        </div>
+      </div>
+      <div class="icons">
+        <div class="icon icon-hastag">
+          <a href="#">
+            <img src="https://www.primefaces.org/mirage-ng/assets/layout/images/landing/icon-twitter.png" width="18">
+          </a>
+        </div>
+        <div class="icon icon-twitter">
+          <a href="#">
+            <img src="https://www.primefaces.org/mirage-ng/assets/layout/images/landing/icon-facebook.png" width="18" height="18">
+          </a>
+        </div>
+        <div class="icon icon-prime">
+          <a href="#">
+            <img src="https://www.primefaces.org/mirage-ng/assets/layout/images/landing/icon-github.png" width="18">
+          </a>
+        </div>
+      </div>
+      <div class="landing-mask" id="landing-mask"></div>
+    </div>
+
+    <script>
+      
+    </script>
+
+
+  </div>
+</ion-content>

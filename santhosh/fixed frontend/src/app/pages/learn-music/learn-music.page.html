@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Learn Music</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/add-training', '']" *ngIf="ls.hasFunction('FUNC_VIEW_ADMIN_MENU')">
+        <ion-icon slot="end" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="app-background">
+  <ion-toolbar color="light">
+    <ion-segment [(ngModel)]="tab" (ionChange)="loadTrainings($event)">
+      <ion-segment-button href="#inst" value="inst">
+        <ion-label style="    font-size: 16px;
+    font-weight: 600;">Instrumental <br>Training</ion-label>
+      </ion-segment-button>
+      <ion-segment-button href="#vocl" value="vocl">
+        <ion-label style="    font-size: 16px;
+    font-weight: 600;">Vocal <br>Training</ion-label>
+      </ion-segment-button>
+      <ion-segment-button href="#cour" value="cour">
+        <ion-label style="    font-size: 16px;
+    font-weight: 600;">My <br>Courses</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div [ngSwitch]="tab">
+    <div *ngSwitchCase="'inst'">
+      <ion-grid *ngIf="ts.trainings.getValue()">
+        <ion-row>
+          <ion-col *ngFor="let c of getTrainingsByCategoty('INST')" size-md="4" size-lg="4" size-xs="12" size-sm="12">
+            <ion-card button="true" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+              <ion-card-content class="ion-text-justify" style="padding: 0px;">
+                <div class="app-card-img">
+                  <img src="{{util.getFullUrl('file/') + c.trainingPhoto}}" *ngIf="c.trainingPhoto" style="border-radius: 10px; width: 100%;"/>
+                </div>
+                <div class="ion-padding">
+                  <ion-card-title style="font-size: 29px;">{{c.trainingName}}</ion-card-title>
+                  <ion-card-subtitle>{{c.trainingDesc}}</ion-card-subtitle>
+                  <br/>
+                  <div class="" *ngIf="!c.isSubscribed">
+                    <ion-button fill="outline" shape="round" (click)="subscribeCourse(c)" color="secondary">
+                      <ion-icon name="cash-outline" slot="start"></ion-icon>
+                      Buy @ Rs.{{c.subscriptionAmount}}
+                    </ion-button>
+                  </div>
+                  <div class="" *ngIf="c.isSubscribed">
+                    <ion-button fill="outline" shape="round" (click)="open(c)" color="success">
+                      <ion-icon name="checkmark-done-sharp" slot="start"></ion-icon>
+                      View
+                    </ion-button>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngSwitchCase="'vocl'">
+      <ion-grid *ngIf="ts.trainings.getValue()">
+        <ion-row>
+          <ion-col *ngFor="let c of getTrainingsByCategoty('VOCL')" size-md="4" size-lg="4" size-xs="12" size-sm="12">
+            <ion-card button="true" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+              <ion-card-content class="ion-text-justify" style="padding: 0px;">
+                <div class="app-card-img">
+                  <img src="{{util.getFullUrl('file/') + c.trainingPhoto}}" *ngIf="c.trainingPhoto" style="border-radius: 10px;"/>
+                </div>
+                <div class="ion-padding">
+                  <ion-card-title style="font-size: 29px;">{{c.trainingName}}</ion-card-title>
+                  <ion-card-subtitle>{{c.trainingDesc}}</ion-card-subtitle>
+                  <br/>
+                  <div class="ion-text-center" *ngIf="!c.isSubscribed">
+                    <ion-button fill="outline" shape="round" (click)="subscribeCourse(c)" color="secondary">
+                      <ion-icon name="cash-outline" slot="start"></ion-icon>
+                      Buy @ Rs.{{c.subscriptionAmount}}
+                    </ion-button>
+                  </div>
+                  <div class="" *ngIf="c.isSubscribed">
+                    <ion-button fill="outline" shape="round" (click)="open(c)" color="success">
+                      <ion-icon name="checkmark-done-sharp" slot="start"></ion-icon>
+                      View
+                    </ion-button>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngSwitchCase="'cour'">
+      <ion-grid *ngIf="ts.trainings.getValue()">
+        <ion-row>
+          <ion-col *ngFor="let c of getSubscribedTrainings()" size-md="4" size-lg="4" size-xs="12" size-sm="12">
+            <ion-card button="true" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+              <ion-card-content class="ion-text-justify" style="padding: 0px;">
+                <div class="app-card-img">
+                  <img src="{{util.getFullUrl('file/') + c.trainingPhoto}}" *ngIf="c.trainingPhoto" style="border-radius: 10px; width: 100%;"/>
+                </div>
+                <div class="ion-padding">
+                  <ion-card-title style="font-size: 29px;">{{c.trainingName}}</ion-card-title>
+                  <ion-card-subtitle>{{c.trainingDesc}}</ion-card-subtitle>
+                  <ion-card-subtitle>Categoty: <b>{{c.category == 'VOCL' ? 'Vocal' : 'Instrumental'}}</b></ion-card-subtitle>
+                  <br/>
+                  <div class="" *ngIf="c.isSubscribed">
+                    <ion-button fill="outline" shape="round" (click)="open(c)" color="success">
+                      <ion-icon name="checkmark-done-sharp" slot="start"></ion-icon>
+                      View
+                    </ion-button>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+<app-footer></app-footer>
