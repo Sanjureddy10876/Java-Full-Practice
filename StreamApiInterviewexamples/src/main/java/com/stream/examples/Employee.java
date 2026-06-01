@@ -1,6 +1,7 @@
 package com.stream.examples;
 
 public class Employee {
+	private int id;
 	private String name;
 	private String department;
 	private double salary;
@@ -10,11 +11,44 @@ public class Employee {
 	public String toString() {
 		return "Employee [name=" + name + ", department=" + department + ", salary=" + salary + "]";
 	}
+
+	
+	
+	
+	public Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+
+
+
 	public Employee(String name, String department, double salary) {
 		super();
 		this.name = name;
 		this.department = department;
 		this.salary = salary;
+	}
+
+
+
+	public Employee(int id, String name, String department, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.department = department;
+		this.salary = salary;
+	}
+
+
+
+	public Employee(int id, String name, String department) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.department = department;
 	}
 	public String getName() {
 		return name;
@@ -33,5 +67,12 @@ public class Employee {
 	}
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 }
